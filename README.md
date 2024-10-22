@@ -55,3 +55,12 @@ To use the model:
 
 1. Download the trained model [EVi.pt](https://github.com/the3rdchild/EVi/tree/main/model) and place it in the model directory.
 2. Modify the configuration in [main.py](https://github.com/the3rdchild/EVi/blob/main/main.py) to point to the path of EVi.pt in your local machine.
+
+You can also modify the classes detected by the model by editing the [main.py](https://github.com/the3rdchild/EVi/blob/main/main.py) file. In the model section, update the class_names dictionary to include your desired classes like this: 
+```
+some code ...
+
+class_names = {"your": 0, "class": 0}.
+
+some code ...
+```
