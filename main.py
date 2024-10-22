@@ -3,10 +3,10 @@ import time
 from ultralytics import YOLO
 import os
 
-home_directory = os.path.expanduser('~/EVi')
-model_path = os.path.join(home_directory, 'Model', 'best.pt')
-result_path = os.path.join(home_directory, 'Result', 'Result.txt')
-image_save_path = os.path.join(home_directory, 'Result')
+home_directory = os.path.expanduser('D:/Download/perkuliahan/EVi/EVi')
+model_path = os.path.join(home_directory, 'model', 'best.pt')
+result_path = os.path.join(home_directory, 'result', 'result.txt')
+image_save_path = os.path.join(home_directory, 'result', 'image')
 
 model = YOLO(model_path)
 
@@ -50,10 +50,11 @@ while cap.isOpened():
                 total_counts[cls_name] += count
         deteksi_txt.write("\n")
 
+cv2.imshow('Camera 1', frame)
 cap.release()
 deteksi_txt.close()
 
-final_result_path = os.path.join(home_directory, 'Result', 'Final_Result.txt')
+final_result_path = os.path.join(home_directory, 'result', 'fresult.txt')
 with open(final_result_path, "w") as final_result_txt:
     for cls_name, total in total_counts.items():
         final_result_txt.write(f"{cls_name}: {total}\n")
