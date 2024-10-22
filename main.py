@@ -2,17 +2,17 @@ import os
 import cv2
 from ultralytics import YOLO
 
-home_directory = os.path.expanduser('D:/Download/perkuliahan/EVi/test')
+home_directory = os.path.expanduser('~/EVi')
 result_dir = os.path.join(home_directory, 'result')
 image_dir = os.path.join(result_dir, 'image')
 os.makedirs(image_dir, exist_ok=True)
 result_path = os.path.join(result_dir, 'result.txt')
 final_result_path = os.path.join(result_dir, 'fresult.txt')
 
-model_path = os.path.join(home_directory, 'model', 'rgd.pt')
+model_path = os.path.join(home_directory, 'model', 'EVi.pt')
 model = YOLO(model_path)
 
-class_names = {"Glass": 0, "Metal": 0, "Plastic": 0}
+class_names = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk": 0}
 total_counts = {name: 0 for name in class_names}
 
 cap = cv2.VideoCapture(0)
