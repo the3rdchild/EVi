@@ -21,7 +21,7 @@ if not cap.isOpened():
 
 # Prepare to write detection results
 deteksi_txt = open(result_path, "w")
-total_counts = {"Glass": 0, "Metal": 0, "Plastic": 0}
+total_counts = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk": 0}
 
 # Start processing frames from the camera
 while cap.isOpened():
