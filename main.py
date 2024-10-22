@@ -50,8 +50,12 @@ while cap.isOpened():
                 total_counts[cls_name] += count
         deteksi_txt.write("\n")
 
-cv2.imshow('Camera 1', frame)
+    cv2.imshow('Camera 1', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
 cap.release()
+cv2.destroyAllWindows()
 deteksi_txt.close()
 
 final_result_path = os.path.join(home_directory, 'result', 'fresult.txt')
