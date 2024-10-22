@@ -1,66 +1,69 @@
-import cv2
-import time
-from ultralytics import YOLO
 import os
+import cv2
+from ultralytics import YOLO
 
-home_directory = os.path.expanduser('D:/Download/perkuliahan/EVi/EVi')
-model_path = os.path.join(home_directory, 'model', 'best.pt')
-result_path = os.path.join(home_directory, 'result', 'result.txt')
-image_save_path = os.path.join(home_directory, 'result', 'image')
+home_directory = os.path.expanduser('D:/Download/perkuliahan/EVi/test')
+result_dir = os.path.join(home_directory, 'result')
+image_dir = os.path.join(result_dir, 'image')
+os.makedirs(image_dir, exist_ok=True)
+result_path = os.path.join(result_dir, 'result.txt')
+final_result_path = os.path.join(result_dir, 'fresult.txt')
 
+model_path = os.path.join(home_directory, 'model', 'rgd.pt')
 model = YOLO(model_path)
 
+class_names = {"Glass": 0, "Metal": 0, "Plastic": 0}
+total_counts = {name: 0 for name in class_names}
+
 cap = cv2.VideoCapture(0)
+fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
+frame_count = 0
+detect_interval = 2  # seconds
 
-if not cap.isOpened():
-    print("Error: Could not open camera.")
-    exit()
+try:
+    with open(result_path, "w") as deteksi_txt:
+        deteksi_txt.write(f"Detection interval: {detect_interval} seconds\n")
 
-deteksi_txt = open(result_path, "w")
-total_counts = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk": 0}
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
 
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
+            frame_count += 1
+            current_time = frame_count / fps
 
-    frame = cv2.resize(frame, (1920, 1080))
+            if current_time % detect_interval < 1.0 / fps:
+                results = model(frame)  # detect
+                class_counts = {name: 0 for name in class_names}
 
-    results = model(frame)
-    class_counts = {}
+                for result in results:
+                    for cls in result.boxes.cls:
+                        cls_name = model.names[int(cls)]
+                        if cls_name in class_counts:
+                            class_counts[cls_name] += 1
 
-    for result in results:
-        for cls in result.boxes.cls:
-            cls_name = model.names[int(cls)]
-            if cls_name in class_counts:
-                class_counts[cls_name] += 1
-            else:
-                class_counts[cls_name] = 1
+                # timestamp
+                minutes = int(current_time // 60)
+                seconds = int(current_time % 60)
+                deteksi_txt.write(f"Time: {minutes}m:{seconds}s: ")
 
-## SAVE IMAGE DETECTED
-    if class_counts:
-        timestamp = time.strftime("%Y%m%d-%H%M%S")
-        image_filename = f"detected_{timestamp}.jpg"
-        cv2.imwrite(os.path.join(image_save_path, image_filename), frame)
+                # representative image and log
+                for cls_name, count in class_counts.items():
+                    if count > 0:
+                        deteksi_txt.write(f"{cls_name}: {count} ")
+                        total_counts[cls_name] += count
 
-        deteksi_txt.write(f"Time: {timestamp} - Detected objects: ")
-        for cls_name, count in class_counts.items():
-            deteksi_txt.write(f"{cls_name}: {count} ")
-            if cls_name in total_counts:
-                total_counts[cls_name] += count
-        deteksi_txt.write("\n")
+                        # save with box
+                        output_img_path = os.path.join(image_dir, f"frame_{minutes}m{seconds}s_{cls_name}.jpg")
+                        boxed_frame = result.plot()
+                        cv2.imwrite(output_img_path, boxed_frame)
+                deteksi_txt.write("\n")
+            
+            # total counts
+            with open(final_result_path, "w") as final_result_txt:
+                for cls_name, total in total_counts.items():
+                    final_result_txt.write("{}: {}\n".format(cls_name, total))
 
-    cv2.imshow('Camera 1', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-deteksi_txt.close()
-
-final_result_path = os.path.join(home_directory, 'result', 'fresult.txt')
-with open(final_result_path, "w") as final_result_txt:
-    for cls_name, total in total_counts.items():
-        final_result_txt.write(f"{cls_name}: {total}\n")
-
-print("Detections finished. Results are saved in the Result folder.")
+finally:
+    cap.release()
+    print(f"Detection finished. Results saved in {result_dir}.")
