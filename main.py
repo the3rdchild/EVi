@@ -22,7 +22,7 @@ detect_interval = 2  # seconds
 
 try:
     with open(result_path, "w") as deteksi_txt:
-        deteksi_txt.write(f"Detection interval: {detect_interval} seconds\n")
+        deteksi_txt.write(f"Deteksi interval: {detect_interval} seconds\n")
 
         while cap.isOpened():
             ret, frame = cap.read()
@@ -66,4 +66,4 @@ try:
 
 finally:
     cap.release()
-    print(f"Detection finished. Results saved in {result_dir}.")
+    print(f"Hasil disimpan di {result_dir}.")
