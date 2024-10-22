@@ -1,6 +1,6 @@
 ## <div align="center">EVi - Exam Vision</div>
 <div align="center">
-[EVi](https://github.com/the3rdchild/evi/) (Exam Vision) is a machine learning-based solution that detects cheating during online exams in real time. By leveraging the power of YOLOv8, this program identifies suspicious behaviors during exams, helping to maintain academic integrity on a large scale.
+<a href="https://github.com/the3rdchild/evi/">EVi</a> (Exam Vision) is a machine learning-based solution that detects cheating during online exams in real time. By leveraging the power of YOLOv8, this program identifies suspicious behaviors during exams, helping to maintain academic integrity on a large scale.
 The system generates reports with timestamps of when cheating behaviors are detected, provides visualizations such as heatmaps to highlight suspicious activities, and can identify cheating patterns across multiple students. EVi can be an essential tool for educators and institutions looking to enhance exam monitoring and prevent academic misconduct efficiently.
 </div>
 
