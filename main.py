@@ -3,75 +3,71 @@ import time
 from ultralytics import YOLO
 import os
 
-home_directory = os.path.expanduser('-/EVi')
+# Set up paths
+home_directory = os.path.expanduser('~/EVi')
 model_path = os.path.join(home_directory, 'Model', 'best.pt')
 result_path = os.path.join(home_directory, 'Result', 'Result.txt')
+image_save_path = os.path.join(home_directory, 'Result')
 
-######################### DETECT #########################
+# Initialize the YOLO model
 model = YOLO(model_path)
-cap = cv2.VideoCapture( ) #ganti ke camera
+
+# Open the camera (default camera index is 0)
+cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
     print("Error: Could not open camera.")
     exit()
 
-######################### RECORD DETECTED OBJECT #########################
-frame_count = 0
-deteksi_interval = 3  # Interval detection in seconds
-fps = int(cap.get(cv2.CAP_PROP_FPS))
+# Prepare to write detection results
 deteksi_txt = open(result_path, "w")
-deteksi_txt.write("Interval {} seconds:\n".format(deteksi_interval))
-
 total_counts = {"Glass": 0, "Metal": 0, "Plastic": 0}
 
+# Start processing frames from the camera
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
         break
 
+    # Resize frame for consistent processing
     frame = cv2.resize(frame, (1920, 1080))
 
-    frame_count += 1
-    current_time = frame_count / fps
+    # Perform detection on the current frame
+    results = model(frame)
+    class_counts = {}
 
-    if current_time % deteksi_interval < 1.0 / fps:
-        results = model(frame)
-        class_counts = {}
+    # Iterate over detected objects
+    for result in results:
+        for cls in result.boxes.cls:
+            cls_name = model.names[int(cls)]
+            if cls_name in class_counts:
+                class_counts[cls_name] += 1
+            else:
+                class_counts[cls_name] = 1
 
-        for result in results:
-            for cls in result.boxes.cls:
-                cls_name = model.names[int(cls)]
-                if cls_name in class_counts:
-                    class_counts[cls_name] += 1
-                else:
-                    class_counts[cls_name] = 1
+    # If any objects detected, save the image and record the details
+    if class_counts:
+        # Save the frame where detections occurred
+        timestamp = time.strftime("%Y%m%d-%H%M%S")
+        image_filename = f"detected_{timestamp}.jpg"
+        cv2.imwrite(os.path.join(image_save_path, image_filename), frame)
 
-        minutes = int(current_time // 60)
-        seconds = int(current_time % 60)
-
-        deteksi_txt.write("Time: {}m:{}s: ".format(minutes, seconds))
+        # Write detection details to the result file
+        deteksi_txt.write(f"Time: {timestamp} - Detected objects: ")
         for cls_name, count in class_counts.items():
-            deteksi_txt.write("{}: {} ".format(cls_name, count))
+            deteksi_txt.write(f"{cls_name}: {count} ")
             if cls_name in total_counts:
                 total_counts[cls_name] += count
         deteksi_txt.write("\n")
 
+# Release the camera and close the file
 cap.release()
 deteksi_txt.close()
 
+# Write final detection totals
+final_result_path = os.path.join(home_directory, 'Result', 'Final_Result.txt')
 with open(final_result_path, "w") as final_result_txt:
     for cls_name, total in total_counts.items():
-        final_result_txt.write("{}: {}\n".format(cls_name, total))
+        final_result_txt.write(f"{cls_name}: {total}\n")
 
-print("Detections finished. Results are in result.txt and Tresult.txt")
-
-######################### DETAIL OF THE VIDEO #########################
-video = cv2.VideoCapture(video_path)
-total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-FPS = video.get(cv2.CAP_PROP_FPS)
-MS = total_frames * 1000 / FPS
-ALL = f"Total Video Frame: {total_frames}", f"Video FPS: {FPS}", f"Video Duration: {MS} ms"
-video.release()
-
-f = open(final_result_path, "a")
-f.write(str(ALL))
+print("Detections finished. Results are saved in the Result folder.")
