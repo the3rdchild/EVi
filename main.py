@@ -42,18 +42,15 @@ try:
                         cls_name = model.names[int(cls)]
                         if cls_name in class_counts:
                             class_counts[cls_name] += 1
-                
+
                     for box in result.boxes:
                         x1, y1, x2, y2 = map(int, box.xyxy[0])
                         conf = box.conf[0]  
                         cls = int(box.cls[0]) 
-                        
                         class_name = model.names[cls]
-
-                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                        
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), (230, 230, 230), 1)
                         label = f"{class_name} {conf:.2f}"
-                        cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                        cv2.putText(frame, label, (x1, y1 - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (230, 230, 230), 1)
                 
                 cv2.imshow('Preview', frame)
                 if cv2.waitKey(1) & 0xFF == ord('q'):
