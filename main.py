@@ -35,13 +35,13 @@ try:
             if current_time % detect_interval < 1.0 / fps:
                 results = model(frame)  # detect
                 class_counts = {name: 0 for name in class_names}
-
+                
                 for result in results:
                     for cls in result.boxes.cls:
                         cls_name = model.names[int(cls)]
                         if cls_name in class_counts:
                             class_counts[cls_name] += 1
-
+                                        
                 # timestamp
                 minutes = int(current_time // 60)
                 seconds = int(current_time % 60)
