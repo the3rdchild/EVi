@@ -1,23 +1,19 @@
 Deteksi interval: 2 seconds
+Time: 0m:2s: Menengok: 1 
 Time: 0m:2s: 
-Time: 0m:2s: 
-Time: 0m:4s: 
-Time: 0m:4s: 
-Time: 0m:6s: 
-Time: 0m:6s: 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
 Time: 0m:8s: 
 Time: 0m:8s: 
-Time: 0m:10s: 
-Time: 0m:10s: 
-Time: 0m:12s: 
-Time: 0m:12s: 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:12s: Menengok: 2 
+Time: 0m:12s: Menengok: 2 
 Time: 0m:14s: 
 Time: 0m:14s: 
-Time: 0m:16s: 
-Time: 0m:18s: 
-Time: 0m:20s: 
+Time: 0m:16s: Menengok: 1 
+Time: 0m:18s: Menengok: 1 
+Time: 0m:20s: Menengok: 1 
 Time: 0m:22s: 
-Time: 0m:24s: 
-Time: 0m:26s: 
-Time: 0m:28s: 
-Time: 0m:30s: 

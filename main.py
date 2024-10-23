@@ -2,7 +2,7 @@ import os
 import cv2
 from ultralytics import YOLO
 
-home_directory = os.path.expanduser('~/EVi')
+home_directory = os.path.expanduser('D:/Download/perkuliahan/EVi/EVi')
 result_dir = os.path.join(home_directory, 'result')
 image_dir = os.path.join(result_dir, 'image')
 os.makedirs(image_dir, exist_ok=True)
@@ -19,6 +19,7 @@ cap = cv2.VideoCapture(0)
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
 detect_interval = 2  # seconds
+conf_tresh = 0.8 # confidence treshold
 
 try:
     with open(result_path, "w") as deteksi_txt:
@@ -33,7 +34,7 @@ try:
             current_time = frame_count / fps
 
             if current_time % detect_interval < 1.0 / fps:
-                results = model(frame)  # detect
+                results = model(frame, conf=conf_tresh)  # detect
                 class_counts = {name: 0 for name in class_names}
                 
                 for result in results:
@@ -63,6 +64,11 @@ try:
             with open(final_result_path, "w") as final_result_txt:
                 for cls_name, total in total_counts.items():
                     final_result_txt.write("{}: {}\n".format(cls_name, total))
+
+            # uncomment to preview camera
+            # cv2.imshow('Preview', frame)
+            # if cv2.waitKey(1) & 0xFF == ord('q'):
+                # break
 
 finally:
     cap.release()
