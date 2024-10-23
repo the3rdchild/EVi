@@ -18,7 +18,7 @@ total_counts = {name: 0 for name in class_names}
 cap = cv2.VideoCapture(0)
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
-detect_interval = 0.016  # seconds
+detect_interval = 0.033  # seconds | 1s / FPS = interval
 conf_tresh = 0.3 # confidence treshold
 
 try:
@@ -43,18 +43,19 @@ try:
                         if cls_name in class_counts:
                             class_counts[cls_name] += 1
 
-                    for box in result.boxes:
-                        x1, y1, x2, y2 = map(int, box.xyxy[0])
-                        conf = box.conf[0]  
-                        cls = int(box.cls[0]) 
-                        class_name = model.names[cls]
-                        cv2.rectangle(frame, (x1, y1), (x2, y2), (230, 230, 230), 1)
-                        label = f"{class_name} {conf:.2f}"
-                        cv2.putText(frame, label, (x1, y1 - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (230, 230, 230), 1)
+                # preview the camera
+                #     for box in result.boxes:
+                #         x1, y1, x2, y2 = map(int, box.xyxy[0])
+                #         conf = box.conf[0]  
+                #         cls = int(box.cls[0]) 
+                #         class_name = model.names[cls]
+                #         cv2.rectangle(frame, (x1, y1), (x2, y2), (230, 230, 230), 1)
+                #         label = f"{class_name} {conf:.2f}"
+                #         cv2.putText(frame, label, (x1, y1 - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (230, 230, 230), 1)
                 
-                cv2.imshow('Preview', frame)
-                if cv2.waitKey(1) & 0xFF == ord('q'):
-                    break
+                # cv2.imshow('Preview', frame)
+                # if cv2.waitKey(1) & 0xFF == ord('q'):
+                #     break
 
                 # timestamp
                 minutes = int(current_time // 60)
