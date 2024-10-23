@@ -1,19 +1,346 @@
-Deteksi interval: 2 seconds
+Deteksi interval: 0.016 seconds
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: Menengok: 1 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:0s: 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:1s: 
+Time: 0m:1s: 
+Time: 0m:1s: Menengok: 1 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
 Time: 0m:2s: Menengok: 1 
 Time: 0m:2s: 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: Menengok: 1 
+Time: 0m:2s: 
+Time: 0m:2s: 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: Menengok: 1 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:3s: 
+Time: 0m:4s: 
 Time: 0m:4s: Menengok: 1 
 Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 2 
+Time: 0m:4s: Menengok: 2 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:4s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: Menengok: 1 
+Time: 0m:5s: 
+Time: 0m:5s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
+Time: 0m:6s: 
 Time: 0m:6s: Menengok: 1 
 Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:6s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: Menengok: 1 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: 
+Time: 0m:7s: 
 Time: 0m:8s: 
 Time: 0m:8s: 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: Menengok: 1 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:8s: 
+Time: 0m:9s: 
+Time: 0m:9s: 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
+Time: 0m:9s: Menengok: 1 
 Time: 0m:10s: Menengok: 1 
 Time: 0m:10s: Menengok: 1 
-Time: 0m:12s: Menengok: 2 
-Time: 0m:12s: Menengok: 2 
-Time: 0m:14s: 
-Time: 0m:14s: 
-Time: 0m:16s: Menengok: 1 
-Time: 0m:18s: Menengok: 1 
-Time: 0m:20s: Menengok: 1 
-Time: 0m:22s: 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:10s: Menengok: 1 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: 
+Time: 0m:11s: Menengok: 1 
+Time: 0m:11s: Menengok: 1 
+Time: 0m:11s: Menengok: 1 
+Time: 0m:11s: Menengok: 1 
+Time: 0m:11s: Menengok: 1 
+Time: 0m:11s: Menengok: 1 
+Time: 0m:11s: Menengok: 1 

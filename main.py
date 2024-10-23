@@ -18,8 +18,8 @@ total_counts = {name: 0 for name in class_names}
 cap = cv2.VideoCapture(0)
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
-detect_interval = 2  # seconds
-conf_tresh = 0.8 # confidence treshold
+detect_interval = 0.016  # seconds
+conf_tresh = 0.3 # confidence treshold
 
 try:
     with open(result_path, "w") as deteksi_txt:
@@ -42,7 +42,23 @@ try:
                         cls_name = model.names[int(cls)]
                         if cls_name in class_counts:
                             class_counts[cls_name] += 1
-                                        
+                
+                    for box in result.boxes:
+                        x1, y1, x2, y2 = map(int, box.xyxy[0])
+                        conf = box.conf[0]  
+                        cls = int(box.cls[0]) 
+                        
+                        class_name = model.names[cls]
+
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                        
+                        label = f"{class_name} {conf:.2f}"
+                        cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                
+                cv2.imshow('Preview', frame)
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break
+
                 # timestamp
                 minutes = int(current_time // 60)
                 seconds = int(current_time % 60)
@@ -64,12 +80,6 @@ try:
             with open(final_result_path, "w") as final_result_txt:
                 for cls_name, total in total_counts.items():
                     final_result_txt.write("{}: {}\n".format(cls_name, total))
-
-            # uncomment to preview camera
-            # cv2.imshow('Preview', frame)
-            # if cv2.waitKey(1) & 0xFF == ord('q'):
-                # break
-
 finally:
     cap.release()
     print(f"Hasil disimpan di {result_dir}.")
