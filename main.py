@@ -16,6 +16,12 @@ class_names = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk":
 total_counts = {name: 0 for name in class_names}
 
 cap = cv2.VideoCapture(0)
+
+# default = 640 x 480
+# the result is dipend on the camera spec
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)  # 720p = 1280 × 720
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080) # 1080p = 1920 × 1080
+
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
 detect_interval = 0.033  # seconds | 1s / FPS = interval
@@ -43,7 +49,7 @@ try:
                         if cls_name in class_counts:
                             class_counts[cls_name] += 1
 
-                # preview the camera
+                # uncomment to preview the camera
                 #     for box in result.boxes:
                 #         x1, y1, x2, y2 = map(int, box.xyxy[0])
                 #         conf = box.conf[0]  
