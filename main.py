@@ -18,14 +18,14 @@ total_counts = {name: 0 for name in class_names}
 cap = cv2.VideoCapture(0)
 
 # default = 640 x 480
-# the result is dipend on the camera spec
+# the result is depend on the camera spec
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)  # 720p = 1280 × 720
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080) # 1080p = 1920 × 1080
 
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
 detect_interval = 0.033  # seconds | 1s / FPS = interval
-conf_tresh = 0.3 # confidence treshold
+conf_thres = 0.3 # confidence threshold 
 
 try:
     with open(result_path, "w") as deteksi_txt:
@@ -40,7 +40,7 @@ try:
             current_time = frame_count / fps
 
             if current_time % detect_interval < 1.0 / fps:
-                results = model(frame, conf=conf_tresh)  # detect
+                results = model(frame, conf=conf_thres)  # detect
                 class_counts = {name: 0 for name in class_names}
                 
                 for result in results:
