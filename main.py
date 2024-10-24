@@ -2,7 +2,7 @@ import os
 import cv2
 from ultralytics import YOLO
 
-home_directory = os.path.expanduser('D:/Download/perkuliahan/EVi/EVi')
+home_directory = os.path.expanduser('~/EVi')
 result_dir = os.path.join(home_directory, 'result')
 image_dir = os.path.join(result_dir, 'image')
 os.makedirs(image_dir, exist_ok=True)
