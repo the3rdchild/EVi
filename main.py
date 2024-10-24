@@ -18,7 +18,7 @@ total_counts = {name: 0 for name in class_names}
 cap = cv2.VideoCapture(0)
 
 # default = 640 x 480
-# the result is dipend on the camera spec
+# the result is depend on the camera spec
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)  # 720p = 1280 × 720
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080) # 1080p = 1920 × 1080
 
