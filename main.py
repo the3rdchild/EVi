@@ -9,7 +9,7 @@ os.makedirs(image_dir, exist_ok=True)
 result_path = os.path.join(result_dir, 'result.txt')
 final_result_path = os.path.join(result_dir, 'fresult.txt')
 
-model_path = os.path.join(home_directory, 'model', 'EVi.pt')
+model_path = os.path.join(home_directory, 'model', 'EVi.pt') #yolo8 - yolo11
 model = YOLO(model_path)
 
 class_names = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk": 0}

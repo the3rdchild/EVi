@@ -52,7 +52,7 @@ python main.py
 ```
 
 ## <div align="center">Models</div>
-EVi uses the YOLOv8 model, which is well-suited for real-time object detection tasks. The system is pre-trained with EVi.pt, a specialized model to recognize cheating behaviors based on various visual and behavioral cues.
+EVi uses the YOLOv8 - YOLO11 model, which is well-suited for real-time object detection tasks. The system is pre-trained with EVi.pt, a specialized model to recognize cheating behaviors based on various visual and behavioral cues.
 To use the model:
 
 1. Download the trained model [EVi.pt](https://github.com/the3rdchild/EVi/tree/main/model) and place it in the model directory.
