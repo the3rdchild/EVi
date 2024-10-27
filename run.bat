@@ -1,2 +1,3 @@
 @echo off
-python -u main.py
+start python main.py
+start python audio.py
