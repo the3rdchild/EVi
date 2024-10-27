@@ -22,6 +22,11 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+4. Install requirement dependencies:
+```
+pip install -r requirements.txt
+``` 
+
 or you can run all the program using
 included [run.bat](https://github.com/the3rdchild/EVi/blob/main/run.bat) file:
 - Double-click the run.bat file, which contains simple code:
@@ -45,8 +50,12 @@ python -m venv venv
 ```
 venv\Scripts\activate
 ```
+4. Install requirement dependencies:
+```
+pip install -r requirements.txt
+```
 
-4. Run the program:
+5. Run the program:
 ```
 python main.py
 ```
