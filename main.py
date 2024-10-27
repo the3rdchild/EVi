@@ -25,7 +25,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080) # 1080p = 1920 × 1080
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
 detect_interval = 0.033  # seconds | 1s / FPS = interval
-conf_thres = 0.3 # confidence threshold 
+conf_thres = 0.85 # confidence threshold 
 
 try:
     with open(result_path, "w") as deteksi_txt:
