@@ -14,7 +14,7 @@ def db_level(audio_data):
 
 def record_audio():
     print("Recording...")
-    audio_data = sd.rec(int(DURATION * SAMPLERATE), samplerate=SAMPLERATE, channels=1)
+    audio_data = sd.rec(int(DURATION * SAMPLERATE), samplerate=SAMPLERATE, channels=2)
     sd.wait()
     timestamp = int(time.time())
     wav.write(f'recorded_{timestamp}.wav', SAMPLERATE, audio_data)
@@ -22,10 +22,10 @@ def record_audio():
 
 def main():
     #monitor audio lvl
-    with sd.InputStream(samplerate=SAMPLERATE, channels=1, callback=None):
+    with sd.InputStream(samplerate=SAMPLERATE, channels=2, callback=None):
         print("Chill, bro is listening...")
         while True:
-            audio_data = sd.rec(int(0.5 * SAMPLERATE), samplerate=SAMPLERATE, channels=1)
+            audio_data = sd.rec(int(0.5 * SAMPLERATE), samplerate=SAMPLERATE, channels=2)
             sd.wait()
             audio_data = np.squeeze(audio_data)
             
