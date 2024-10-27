@@ -32,7 +32,8 @@ included [run.bat](https://github.com/the3rdchild/EVi/blob/main/run.bat) file:
 - Double-click the run.bat file, which contains simple code:
 ```
 @echo off
-python -u main.py
+python main.py
+python audio.py
 ```
 
 ### Linux
