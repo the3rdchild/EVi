@@ -1,15 +1,13 @@
 import os
 import cv2
 from ultralytics import YOLO
+form path import result_dir, image_dir, result_path, final_result_path, model_path
 
-home_directory = os.path.expanduser('~/EVi')
-result_dir = os.path.join(home_directory, 'result')
-image_dir = os.path.join(result_dir, 'image')
+
+
 os.makedirs(image_dir, exist_ok=True)
-result_path = os.path.join(result_dir, 'result.txt')
-final_result_path = os.path.join(result_dir, 'fresult.txt')
 
-model_path = os.path.join(home_directory, 'model', 'EVi.pt') #yolo8 - yolo11
+
 model = YOLO(model_path)
 
 class_names = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk": 0}
