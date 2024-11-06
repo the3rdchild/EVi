@@ -150,7 +150,7 @@ while not done:
                      (screensize[0] / 3 + margin, 100,
                       (screensize[0] / 3) * 2,
                       screensize[1] - 100)) 
-    text = f_db.render("%s dB"%db, True, txt, bg)
+    text = f_db.render("%s dB"%db, True, txt, bg) # the val is 'db'
     screen.blit(text,
                 [screensize[0] - (screensize[0] / 1.75),
                  screensize[1] / 2])

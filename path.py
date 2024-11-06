@@ -11,3 +11,5 @@ image_dir = os.path.join(result_dir, 'Image')
 model_path = os.path.join(EVi, 'Model', 'EVi.pt') #yolo8 - yolo11
 config = os.path.join(EVi, "rec", "config.yml")
 logos = os.path.join(EVi, "rec", "logos")
+dbmeter = os.path.join(EVi, "rec", "dbmeter.py")
+save_path = os.path.join(EVi, "rec", "recorded")
