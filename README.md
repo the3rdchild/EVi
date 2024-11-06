@@ -13,17 +13,17 @@ git clone https://github.com/yourusername/EVi.git
 cd EVi
 ```
 2. Set up a Python virtual environment (optional):
-```
+```python
 python -m venv venv
 ```
 
 3. Activate the virtual environment (optioal):
-```
+```python
 venv\Scripts\activate
 ```
 
 4. Install requirement dependencies:
-```
+```python
 pip install -r requirements.txt
 ``` 
 
@@ -49,21 +49,21 @@ git clone https://github.com/yourusername/EVi.git
 cd EVi
 ```
 2. Set up a Python virtual environment (optional):
-```
+```python
 python -m venv venv
 ```
 
 3. Activate the virtual environment (optioal):
-```
+```python
 venv\Scripts\activate
 ```
 4. Install requirement dependencies:
-```
+```python
 pip install -r requirements.txt
 ```
 
 5. Run the program:
-```
+```python
 python main.py
 ```
 
