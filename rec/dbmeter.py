@@ -55,9 +55,9 @@ pygame.mouse.set_visible(CFG['mouse']['visible'])
 
 colors = {
     "BLACK":    (0, 0, 0),
-    "BLUE":     (0, 0, 255),
-    "GREEN":    (0, 255, 0),
-    "RED":      (255, 0, 0),
+    "GREEN":     (92, 186, 73), 
+    "BLUE":    (50, 102, 173),
+    "RED":      (179, 79, 70),
     "ORANGE":   (255, 92, 0),
     "YELLOW":   (255, 255, 102),
     "WHITE":    (255, 255, 255)
@@ -131,7 +131,7 @@ while not done:
 
     db = ag_samples(total)
     if float(db) > CFG['ranges']['red']:
-        bg = colors['RED']
+        bg = colors['BLUE']
         txt = colors['BLACK']
     elif float(db) > CFG['ranges']['yellow']:
         bg = colors['YELLOW']
@@ -161,7 +161,7 @@ while not done:
     i = 0
     sectionx = i * screensize[0] / 3 + margin
     pygame.draw.rect(screen,
-                     colors['RED'],
+                     colors['BLUE'],
                      (sectionx,
                       screensize[1] - (max_value[i] * 5),
                       screensize[0] / 3 - 2 * margin,
@@ -181,7 +181,7 @@ while not done:
         x = j + sectionx
         y = screensize[1] - (sound_tracks[i][j] * 5)
         pygame.draw.rect(screen,
-                         colors['BLUE'],
+                         colors['RED'],
                          (x, y, 1,
                           screensize[1] - margin))
 
