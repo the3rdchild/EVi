@@ -19,7 +19,7 @@ print(config)
 with open(config, 'r') as ymlfile:
     CFG = yaml.load(ymlfile, Loader=yaml.SafeLoader)
 
-CHUNK = 1024 * 4
+CHUNK = 1024 # between 256 - 2048
 FORMAT = pyaudio.paInt16 
 CHANNELS = 1
 RATE = 44100
@@ -83,8 +83,10 @@ samples = []
 avg = 0
 max_db = 0
 
-logo = pygame.image.load(os.path.join(logos, 'mic.png')) #tinggal ganti dir
-pygame.display.set_icon(logo)
+logo = pygame.image.load(os.path.join(logos, 'logo.png'))
+icon = pygame.image.load(os.path.join(logos, "mic.png")).convert()
+pygame.display.set_icon(icon)
+
 
 def ag_samples(sample):
     ''' collect samples and average if needed. '''
