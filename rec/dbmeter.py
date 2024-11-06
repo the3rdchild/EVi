@@ -3,10 +3,20 @@ import audioop
 import math
 import yaml
 import pygame
+import os
+import sys
 import pyaudio
 from pygame import font as pygame_font
 
-with open('config.yml', 'r') as ymlfile:
+rec_dir = os.path.dirname(os.path.abspath(__file__))
+EVi = os.path.join(rec_dir, '..')
+sys.path.append(EVi)
+
+from path import config, logos
+
+print(config)
+
+with open(config, 'r') as ymlfile:
     CFG = yaml.load(ymlfile, Loader=yaml.SafeLoader)
 
 CHUNK = 1024 * 4
@@ -73,7 +83,7 @@ samples = []
 avg = 0
 max_db = 0
 
-logo = pygame.image.load('D:/Download/perkuliahan/EVi/audiotest/dB_meter/logos/mic.png') #tinggal ganti dir
+logo = pygame.image.load(os.path.join(logos, 'mic.png')) #tinggal ganti dir
 pygame.display.set_icon(logo)
 
 def ag_samples(sample):
