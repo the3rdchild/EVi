@@ -1,0 +1,34 @@
+---
+appName:  'Decible Meter'
+logo:     './logos/logo.png'
+
+audio:
+    chunk:      1024 * 4
+    format:     pyaudio.paInt16
+    channels:   1
+    rate:       44100
+
+screen:
+    fullscreen: False     #Sets to True or False
+    width:      720       # Even if fullscreen is True, set the boundaries.
+    height:     480       # Even if fullscreen is True, set the boundaries.
+    bg_color:   BLACK
+
+mouse:
+    visible:    True
+
+text:
+    default:
+        font:   None
+        size:   90
+    dB:
+        font:   None
+        size:   120
+    button:
+        font:   None
+        size:   40
+
+ranges:
+    red:        99
+    yellow:     95
+    green:      80        # Also known as the 'pocket'... it's where we want to be.
