@@ -1,5 +1,8 @@
 opencv-python
+ultralytics
 sounddevice 
 numpy 
 scipy
-sounddevice
+PyYAML
+pygame
+pyaudio
