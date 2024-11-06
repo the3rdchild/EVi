@@ -30,10 +30,16 @@ pip install -r requirements.txt
 or you can run all the program using
 included [run.bat](https://github.com/the3rdchild/EVi/blob/main/run.bat) file:
 - Double-click the run.bat file, which contains simple code:
-```
+```batch
 @echo off
-python main.py
-python audio.py
+
+REM run main.py 
+start cmd /k "python .\main.py"
+
+REM run dbmeter.py
+start cmd /k "python .\dbmeter\dbmeter.py"
+
+pause
 ```
 
 ### Linux
