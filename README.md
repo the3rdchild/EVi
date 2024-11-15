@@ -9,7 +9,7 @@ The system generates reports with timestamps of when cheating behaviors are dete
 ### Windows
 1. Clone the repository to your local machine:
 ```git
-git clone https://github.com/yourusername/EVi.git
+git clone https://github.com/the3rdchild/EVi.git
 cd EVi
 ```
 2. Set up a Python virtual environment (optional):
