@@ -12,3 +12,4 @@ model_path = os.path.join(EVi, 'Model', 'EVi.pt') #yolo8 - yolo11
 config = os.path.join(EVi, "dbmeter", "config.yml")
 logos = os.path.join(EVi, "dbmeter", "logos")
 dbmeter = os.path.join(EVi, "dbmeter", "dbmeter.py")
+class_names = os.path.join(EVi, "class_names.py")

@@ -1,12 +1,12 @@
 import os
 import cv2
 from ultralytics import YOLO
-from path import result_dir, image_dir, result_path, final_result_path, model_path
+from path import result_dir, image_dir, result_path, final_result_path, model_path, class_names
 
 os.makedirs(image_dir, exist_ok=True)
 model = YOLO(model_path)
 
-class_names = {"Handphone": 0, "Memberi contekan": 0, "Menengok": 0, "Menunduk": 0}
+
 total_counts = {name: 0 for name in class_names}
 
 cap = cv2.VideoCapture(0)
