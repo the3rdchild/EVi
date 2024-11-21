@@ -4,3 +4,14 @@ class_names = {
     "Menengok": 0, 
     "Menunduk": 0
 }
+
+# bertukar-contenkan
+# buku
+# handphone
+# laptop
+# memasukan tangan
+# menengok
+# mengangkat-kaki
+# mengangkat-kertas
+# mengobrol
+# menunduk
