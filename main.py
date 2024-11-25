@@ -20,7 +20,7 @@ detect_interval = 0.033  # seconds | 1s / FPS = interval
 # FPScap = 30
 fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30  # fallback to 30 fps if unknown
 frame_count = 0
-conf_thres = 0.85 # confidence threshold 
+conf_thres = 0.15 # confidence threshold 
 
 try:
     with open(result_path, "w") as deteksi_txt:
@@ -45,18 +45,18 @@ try:
                             class_counts[cls_name] += 1
 
                 # uncomment to preview the camera
-                #     for box in result.boxes:
-                #         x1, y1, x2, y2 = map(int, box.xyxy[0])
-                #         conf = box.conf[0]  
-                #         cls = int(box.cls[0]) 
-                #         class_name = model.names[cls]
-                #         cv2.rectangle(frame, (x1, y1), (x2, y2), (230, 230, 230), 1)
-                #         label = f"{class_name} {conf:.2f}"
-                #         cv2.putText(frame, label, (x1, y1 - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (230, 230, 230), 1)
+                    for box in result.boxes:
+                        x1, y1, x2, y2 = map(int, box.xyxy[0])
+                        conf = box.conf[0]  
+                        cls = int(box.cls[0]) 
+                        class_name = model.names[cls]
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), (230, 230, 230), 1)
+                        label = f"{class_name} {conf:.2f}"
+                        cv2.putText(frame, label, (x1, y1 - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (230, 230, 230), 1)
                 
-                # cv2.imshow('Preview', frame)
-                # if cv2.waitKey(1) & 0xFF == ord('q'):
-                #     break
+                cv2.imshow('Preview', frame)
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break
 
                 # timestamp
                 minutes = int(current_time // 60)
